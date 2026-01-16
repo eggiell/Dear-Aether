@@ -86,52 +86,53 @@ body {
 
 }
 @media (max-width: 600px) {
+  /* BODY: STOP CENTER */
   body {
-    min-height: 100dvh;
     height: auto;
+    min-height: 100dvh;
     overflow-y: auto;
-    justify-content: flex-start;
-    padding: 0;
+
+    justify-content: flex-start; /* ❗ kunci */
+    align-items: stretch;        /* ❗ kunci */
   }
 
-  /* INTRO TETAP DI TENGAH */
+  /* INTRO TETAP TENGAH */
   .intro {
     min-height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 24px;
     text-align: center;
     font-size: 1.15rem;
-    padding: 0 24px;
   }
 
   .btn {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   /* LETTER MULAI DARI ATAS */
   .letter {
-    width: 94vw;
-    max-width: 94vw;
+    width: 90%;
     margin: 0 auto 40px;
 
     height: auto;              /* ❗ turun ke bawah */
-    overflow: hidden;
+    padding: 32px 24px 36px 64px;
 
-    padding: 36px 24px 40px 68px;
     font-size: 1rem;
-    line-height: 1.75;
+    line-height: 28px;         /* ❗ SAMA DENGAN GARIS */
+    overflow: hidden;
   }
 
-  /* TEKS MULAI DARI BARIS ATAS */
+  /* TEKS AMAN */
   .letter p {
-    margin-top: 0;             /* ❗ STOP mulai dari tengah */
-    padding-top: 6px;
+    margin-top: 0;
+    padding-top: 2px;
   }
 
   /* BINDER */
   .letter::before {
     width: 22px;
-    background-size: 22px 44px;
+    background-size: 22px 40px;
   }
 }
