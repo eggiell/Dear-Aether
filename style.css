@@ -85,54 +85,43 @@ body {
   transform: rotate(-2deg);
 
 }
-
 @media (max-width: 600px) {
   body {
-    padding: 20px;
-    height: auto;
+    height: auto;          /* jangan pakai 100vh di mobile */
+    min-height: 100dvh;    /* viewport modern (aman) */
+    overflow-y: auto;      /* boleh scroll */
+    padding: 24px 16px;
     justify-content: flex-start;
   }
 
   .intro {
-    font-size: 1.1rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: 1.15rem;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    text-align: center;
   }
 
   .btn {
-    font-size: 0.95rem;
-    padding: 10px 18px;
+    margin-bottom: 32px;
   }
 
   .letter {
     width: 100%;
     max-width: 100%;
-    height: auto;
-    min-height: 70vh;
-    padding: 25px 20px 25px 55px;
+    height: auto;          /* jangan dikunci */
+    min-height: unset;
+    padding: 24px 18px 28px 56px;
     font-size: 1rem;
-    line-height: 1.5;
-    overflow-y: auto;
+    line-height: 1.55;
+    overflow: hidden;      /* biar kelihatan kayak kertas */
   }
 
   .letter p {
-    margin-top: -45px;
+    margin-top: -40px;
   }
 
   .letter::before {
     width: 18px;
     background-size: 18px 36px;
-  }
-}
-
-/* Extra small phones */
-@media (max-width: 360px) {
-  .intro {
-    font-size: 1rem;
-  }
-
-  .letter {
-    padding: 20px 16px 20px 50px;
-    font-size: 0.95rem;
   }
 }
