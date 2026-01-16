@@ -136,3 +136,15 @@ body {
     background-size: 22px 40px;
   }
 }
+
+@media (max-width: 600px) {
+  /* HILANGKAN SISA RUANG ATAS */
+  .letter {
+    margin-top: 0 !important;
+  }
+
+  /* PAKSA KERTAS NEMPEL KE ATAS */
+  body {
+    padding-top: 0 !important;
+  }
+}
