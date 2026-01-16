@@ -87,41 +87,48 @@ body {
 }
 @media (max-width: 600px) {
   body {
-    height: auto;          /* jangan pakai 100vh di mobile */
-    min-height: 100dvh;    /* viewport modern (aman) */
-    overflow-y: auto;      /* boleh scroll */
-    padding: 24px 16px;
+    min-height: 100dvh;
+    height: auto;
+    overflow-y: auto;
+    padding: 0;
     justify-content: flex-start;
   }
 
+  /* INTRO CENTER FIX */
   .intro {
-    font-size: 1.15rem;
-    margin-top: 48px;
-    margin-bottom: 24px;
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    font-size: 1.15rem;
+    padding: 0 24px;
   }
 
   .btn {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 
+  /* LETTER WIDTH & ALIGNMENT */
   .letter {
-    width: 100%;
-    max-width: 100%;
-    height: auto;          /* jangan dikunci */
-    min-height: unset;
-    padding: 24px 18px 28px 56px;
+    width: 92%;
+    max-width: 640px;          /* 👉 bikin lebih melebar */
+    margin: 0 auto 40px auto;
+    height: auto;
+    padding: 34px 26px 36px 70px;
+
     font-size: 1rem;
-    line-height: 1.55;
-    overflow: hidden;      /* biar kelihatan kayak kertas */
+    line-height: 1.75;         /* 👉 teks pas di tengah garis */
   }
 
+  /* TEXT POSITION FIX */
   .letter p {
-    margin-top: -40px;
+    margin-top: -30px;         /* 👉 sejajarin teks dg garis */
   }
 
+  /* BINDER STRIP */
   .letter::before {
-    width: 18px;
-    background-size: 18px 36px;
+    width: 22px;
+    background-size: 22px 44px;
   }
 }
