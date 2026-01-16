@@ -166,3 +166,23 @@ body {
     background-size: 22px 44px;
   }
 }
+
+@media (max-width: 600px) {
+  /* PAKSA RESET TEXT */
+  .letter p {
+    margin-top: 0 !important;
+    padding-top: 12px !important;
+  }
+
+  /* PAKSA STABIL LETTER */
+  .letter {
+    width: 96vw !important;
+    max-width: 96vw !important;
+    height: auto !important;
+    overflow: hidden !important;
+
+    padding: 36px 24px 40px 68px !important;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
