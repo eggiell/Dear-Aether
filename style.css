@@ -90,11 +90,11 @@ body {
     min-height: 100dvh;
     height: auto;
     overflow-y: auto;
-    padding: 0;
     justify-content: flex-start;
+    padding: 0;
   }
 
-  /* INTRO CENTER FIX */
+  /* INTRO TETAP DI TENGAH */
   .intro {
     min-height: 45vh;
     display: flex;
@@ -109,80 +109,29 @@ body {
     margin-bottom: 40px;
   }
 
-  /* LETTER WIDTH & ALIGNMENT */
+  /* LETTER MULAI DARI ATAS */
   .letter {
-    width: 92%;
-    max-width: 640px;          /* 👉 bikin lebih melebar */
-    margin: 0 auto 40px auto;
-    height: auto;
-    padding: 34px 26px 36px 70px;
+    width: 94vw;
+    max-width: 94vw;
+    margin: 0 auto 40px;
 
-    font-size: 1rem;
-    line-height: 1.75;         /* 👉 teks pas di tengah garis */
-  }
+    height: auto;              /* ❗ turun ke bawah */
+    overflow: hidden;
 
-  /* TEXT POSITION FIX */
-  .letter p {
-    margin-top: -30px;         /* 👉 sejajarin teks dg garis */
-  }
-
-  /* BINDER STRIP */
-  .letter::before {
-    width: 22px;
-    background-size: 22px 44px;
-  }
-}
-
-@media (max-width: 600px) {
-  /* BODY STABIL */
-  body {
-    min-height: 100dvh;
-    overflow-y: auto;
-    justify-content: flex-start;
-  }
-
-  /* LETTER FIX */
-  .letter {
-    width: 95vw;              /* 👉 benar-benar melebar */
-    max-width: 95vw;
-    margin: 40px auto;
     padding: 36px 24px 40px 68px;
-
-    height: auto;
-    overflow: hidden;         /* 👉 PENTING: stop teks jatuh */
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
-  /* TEXT RESET (INI KUNCINYA) */
+  /* TEKS MULAI DARI BARIS ATAS */
   .letter p {
-    margin-top: 0;            /* 👉 HAPUS margin negatif */
-    padding-top: 8px;         /* 👉 ganti dengan padding aman */
+    margin-top: 0;             /* ❗ STOP mulai dari tengah */
+    padding-top: 6px;
   }
 
   /* BINDER */
   .letter::before {
     width: 22px;
     background-size: 22px 44px;
-  }
-}
-
-@media (max-width: 600px) {
-  /* PAKSA RESET TEXT */
-  .letter p {
-    margin-top: 0 !important;
-    padding-top: 12px !important;
-  }
-
-  /* PAKSA STABIL LETTER */
-  .letter {
-    width: 96vw !important;
-    max-width: 96vw !important;
-    height: auto !important;
-    overflow: hidden !important;
-
-    padding: 36px 24px 40px 68px !important;
-    font-size: 1rem;
-    line-height: 1.7;
   }
 }
