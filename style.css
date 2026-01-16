@@ -132,3 +132,37 @@ body {
     background-size: 22px 44px;
   }
 }
+
+@media (max-width: 600px) {
+  /* BODY STABIL */
+  body {
+    min-height: 100dvh;
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+
+  /* LETTER FIX */
+  .letter {
+    width: 95vw;              /* 👉 benar-benar melebar */
+    max-width: 95vw;
+    margin: 40px auto;
+    padding: 36px 24px 40px 68px;
+
+    height: auto;
+    overflow: hidden;         /* 👉 PENTING: stop teks jatuh */
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* TEXT RESET (INI KUNCINYA) */
+  .letter p {
+    margin-top: 0;            /* 👉 HAPUS margin negatif */
+    padding-top: 8px;         /* 👉 ganti dengan padding aman */
+  }
+
+  /* BINDER */
+  .letter::before {
+    width: 22px;
+    background-size: 22px 44px;
+  }
+}
